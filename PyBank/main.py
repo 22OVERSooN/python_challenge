@@ -1,6 +1,5 @@
 import os
 import csv
-from typing import Counter
 
 budget_csv = os.path.join("Resources","PyBank_budget_data.csv")
 
@@ -19,10 +18,6 @@ with open(budget_csv) as csvfile:
             date.append(row[0])
             max_row += 1
             total_a = total_a + int(row[1])
-    print("Financial Analysis")
-    print("-------------------------------")
-    print("Total Months: " + str(max_row))
-    print("Total: $" + str(total_a))
 
     for i in range(1,max_row):
         ave_rev.append(revenue[i] - revenue[i-1])
@@ -33,6 +28,13 @@ with open(budget_csv) as csvfile:
         max_date = date[ave_rev.index(max_rev)+1]
         min_date = date[ave_rev.index(min_rev)+1]
     
-    print("Average Change: $" + "%.2f" % arc)
-    print("Greatest Increase in Revenue: " + str(max_date) + " ($" + "%.0f" % max_rev + ")")
-    print("Greatest Decrease in Revenue: " + str(min_date) + " ($" + "%.0f" % min_rev + ")")
+    
+    file = open("Analysis/Pybank.txt","w")
+    file.write("Financial Analysis\n")
+    file.write("-------------------------------\n")
+    file.write("Total Months: " + str(max_row)+"\n")
+    file.write("Total: $" + str(total_a)+"\n")
+    file.write("Average Change: $" + "%.2f" % arc+"\n")
+    file.write("Greatest Increase in Revenue: " + str(max_date) + " ($" + "%.0f" % max_rev + ")\n")
+    file.write("Greatest Decrease in Revenue: " + str(min_date) + " ($" + "%.0f" % min_rev + ")\n")
+    file.close()
