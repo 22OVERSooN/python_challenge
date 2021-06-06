@@ -9,12 +9,12 @@ for words in words_count:
 
 ave_words_length = sum(words_length)/len(words_count)
 
-print("Paragraph Analysis\n")
-print("---------------------------\n")
-print("Approximate Word Count: " + str(len(words_count)) + "\n")
-print("Approximate Sentence Count: " + str(sentence) + "\n")
-print("Average Letter Count: " + str(ave_words_length) + "\n")
-print("Average Sentence Length: " + str(len(words_count)/sentence) + "\n")
+print("Paragraph Analysis")
+print("---------------------------")
+print("Approximate Word Count: " + str(len(words_count)) )
+print("Approximate Sentence Count: " + str(sentence) )
+print("Average Letter Count: " + str(ave_words_length) )
+print("Average Sentence Length: " + str(len(words_count)/sentence) )
 
 file = open("Analysis/PyParagraph_2.txt","w")
 file.write("Paragraph Analysis\n")
