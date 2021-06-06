@@ -46,7 +46,7 @@ with open(election_csv) as csvfile:
     print("Li: " + "%.3f%%"% (lenl/max_vote*100) + " (" + str(lenl)+ ")")
     print("O'Tooley: " + "%.3f%%"% (leno/max_vote*100) + " (" + str(leno)+ ")")
     print("------------------------")
-    print("Winner: " + winner+"\n")
+    print("Winner: " + winner)
     print("------------------------")
 
 
