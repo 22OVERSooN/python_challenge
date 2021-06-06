@@ -32,9 +32,9 @@ with open(budget_csv) as csvfile:
   
     print("Financial Analysis")
     print("-------------------------------")
-    print("Total Months: " + str(max_row)+"")
-    print("Total: $" + str(total_a)+"")
-    print("Average Change: $" + "%.2f" % arc+"")
+    print("Total Months: " + str(max_row))
+    print("Total: $" + str(total_a))
+    print("Average Change: $" + "%.2f" % arc)
     print("Greatest Increase in Revenue: " + str(max_date) + " ($" + "%.0f" % max_rev + ")")
     print("Greatest Decrease in Revenue: " + str(min_date) + " ($" + "%.0f" % min_rev + ")")
 
