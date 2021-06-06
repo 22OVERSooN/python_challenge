@@ -30,13 +30,13 @@ with open(budget_csv) as csvfile:
     
     
   
-    print("Financial Analysis\n")
-    print("-------------------------------\n")
-    print("Total Months: " + str(max_row)+"\n")
-    print("Total: $" + str(total_a)+"\n")
-    print("Average Change: $" + "%.2f" % arc+"\n")
-    print("Greatest Increase in Revenue: " + str(max_date) + " ($" + "%.0f" % max_rev + ")\n")
-    print("Greatest Decrease in Revenue: " + str(min_date) + " ($" + "%.0f" % min_rev + ")\n")
+    print("Financial Analysis")
+    print("-------------------------------")
+    print("Total Months: " + str(max_row)+"")
+    print("Total: $" + str(total_a)+"")
+    print("Average Change: $" + "%.2f" % arc+"")
+    print("Greatest Increase in Revenue: " + str(max_date) + " ($" + "%.0f" % max_rev + ")")
+    print("Greatest Decrease in Revenue: " + str(min_date) + " ($" + "%.0f" % min_rev + ")")
 
     file = open("Analysis/Pybank.txt","w")
     file.write("Financial Analysis\n")

@@ -36,6 +36,20 @@ with open(election_csv) as csvfile:
     elif leno>lenk and leno>lenl and leno>lenc:
         winner = "O'Tooley"
 
+    
+    print("Election Results")
+    print("------------------------")
+    print("Total Votes: " + str(max_vote)+"")
+    print("------------------------")
+    print("Khan: " + "%.3f%%"% (lenk/max_vote*100) + " (" + str(lenk)+ ")")
+    print("Correy: " + "%.3f%%"% (lenc/max_vote*100) + " (" + str(lenc)+ ")")
+    print("Li: " + "%.3f%%"% (lenl/max_vote*100) + " (" + str(lenl)+ ")")
+    print("O'Tooley: " + "%.3f%%"% (leno/max_vote*100) + " (" + str(leno)+ ")")
+    print("------------------------")
+    print("Winner: " + winner+"\n")
+    print("------------------------")
+
+
     file = open("Analysis/Pypoll.txt","w")
     file.write("Election Results\n")
     file.write("------------------------\n")
